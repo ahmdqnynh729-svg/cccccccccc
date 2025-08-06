@@ -105,49 +105,49 @@ export const RegistrationSearch: React.FC<RegistrationSearchProps> = ({ isDarkMo
   // دالة للحصول على موعد الاختبار حسب الفئة
   const getExamScheduleForCategory = (category: string) => {
     const schedules: { [key: string]: { day: string; time: string; date: string; hijriDate: string } } = {
-      "ثلاثة أجزاء": { 
+      "3": { 
         day: "الجمعة", 
         time: "٢:٠٠ ظهراً", 
         date: "الجمعة، ٨ أغسطس ٢٠٢٥ م",
         hijriDate: "الجمعة، ٦ صفر ١٤٤٧ هـ"
       },
-      "خمسة أجزاء": { 
+      "5": { 
+        day: "السبت", 
+        time: "١:٣٠ ظهراً",
+        date: "السبت، ٩ أغسطس ٢٠٢٥ م",
+        hijriDate: "السبت، ٧ صفر ١٤٤٧ هـ"
+      },
+      "8": { 
         day: "السبت", 
         time: "١:٣٠ ظهراً", 
         date: "السبت، ٩ أغسطس ٢٠٢٥ م",
         hijriDate: "السبت، ٧ صفر ١٤٤٧ هـ"
       },
-      "ثمانية أجزاء": { 
+      "10": { 
+        day: "الجمعة", 
+        time: "٢:٠٠ ظهراً", 
+        date: "الجمعة، ١٥ أغسطس ٢٠٢٥ م",
+        hijriDate: "الجمعة، ١٣ صفر ١٤٤٧ هـ"
+      },
+      "15": { 
+        day: "الجمعة", 
+        time: "٢:٠٠ ظهراً", 
+        date: "الجمعة، ١٥ أغسطس ٢٠٢٥ م",
+        hijriDate: "الجمعة، ١٣ صفر ١٤٤٧ هـ"
+      },
+      "20": { 
+        day: "الجمعة", 
+        time: "٢:٠٠ ظهراً", 
+        date: "الجمعة، ١٥ أغسطس ٢٠٢٥ م",
+        hijriDate: "الجمعة، ١٣ صفر ١٤٤٧ هـ"
+      },
+      "25": { 
         day: "السبت", 
         time: "١:٣٠ ظهراً", 
-        date: "السبت، ٩ أغسطس ٢٠٢٥ م",
-        hijriDate: "السبت، ٧ صفر ١٤٤٧ هـ"
-      },
-      "عشرة أجزاء": { 
-        day: "الجمعة", 
-        time: "٢:٠٠ ظهراً", 
-        date: "الجمعة، ١٥ أغسطس ٢٠٢٥ م",
-        hijriDate: "الجمعة، ١٣ صفر ١٤٤٧ هـ"
-      },
-      "خمسة عشر جزءا": { 
-        day: "الجمعة", 
-        time: "٢:٠٠ ظهراً", 
-        date: "الجمعة، ١٥ أغسطس ٢٠٢٥ م",
-        hijriDate: "الجمعة، ١٣ صفر ١٤٤٧ هـ"
-      },
-      "عشرون جزءا": { 
-        day: "الجمعة", 
-        time: "٢:٠٠ ظهراً", 
-        date: "الجمعة، ١٥ أغسطس ٢٠٢٥ م",
-        hijriDate: "الجمعة، ١٣ صفر ١٤٤٧ هـ"
-      },
-      "خمسة وعشرون جزءا": { 
-        day: "السبت", 
-        time: "١:٣٠ ظهراً", 
-        date: "السبت، ١٦ أغسطس ٢٠٢٥ م",
+        date: "السبت، ١٦ أغسطس ٢٠٢٥ م", 
         hijriDate: "السبت، ١٤ صفر ١٤٤٧ هـ"
       },
-      "ثلاثون جزءا": { 
+      "30": { 
         day: "السبت", 
         time: "١:٣٠ ظهراً", 
         date: "السبت، ١٦ أغسطس ٢٠٢٥ م",
@@ -155,7 +155,7 @@ export const RegistrationSearch: React.FC<RegistrationSearchProps> = ({ isDarkMo
       }
     };
     
-    return schedules[category] || { day: "غير محدد", time: "غير محدد", date: "غير محدد", hijriDate: "غير محدد" };
+    return schedules[category.toString()] || { day: "غير محدد", time: "غير محدد", date: "غير محدد", hijriDate: "غير محدد" };
   };
 
   const formatDate = (dateString: string) => {
