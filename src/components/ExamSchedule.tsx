@@ -52,9 +52,9 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({
     // التواريخ الميلادية المقابلة
     const gregorianDates = [
       "الجمعة، ٨ أغسطس ٢٠٢٥ م - ٢:٠٠ ظهراً",
-      "السبت، ٩ أغسطس ٢٠٢٥ م",
+      "السبت، ٩ أغسطس ٢٠٢٥ م - ١:٣٠ ظهراً",
       "الجمعة، ١٥ أغسطس ٢٠٢٥ م - ٢:٠٠ ظهراً",
-      "السبت، ١٦ أغسطس ٢٠٢٥ م",
+      "السبت، ١٦ أغسطس ٢٠٢٥ م - ١:٣٠ ظهراً",
     ];
 
     return {
@@ -68,7 +68,7 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({
   const examEvents: ExamEvent[] = [
     {
       id: 1,
-      date: new Date("2025-08-08T14:00:00"), // Friday, August 8, 2025 after Jumu'ah prayer
+      date: new Date("2025-08-08T14:00:00"), // Friday, August 8, 2025 at 2:00 PM
       day: "الجمعة",
       title: "اختبار حفظ ثلاثة أجزاء",
       description:
@@ -79,7 +79,7 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({
     },
     {
       id: 2,
-      date: new Date("2025-08-09T12:00:00"), // Saturday, 12:00 PM
+      date: new Date("2025-08-09T13:30:00"), // Saturday, 1:30 PM
       day: "السبت",
       title: "اختبار الجزء الخامس والثامن",
       description: "اختبارات حفظ للجزء الخامس والجزء الثامن من القرآن الكريم",
@@ -89,7 +89,7 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({
     },
     {
       id: 3,
-      date: new Date("2025-08-15T14:00:00"), // Friday after Jumu'ah prayer
+      date: new Date("2025-08-15T14:00:00"), // Friday at 2:00 PM
       day: "الجمعة",
       title: "اختبار الأجزاء المتقدمة",
       description: "اختبارات للجزء العاشر والخامس عشر والعشرون",
@@ -99,7 +99,7 @@ export const ExamSchedule: React.FC<ExamScheduleProps> = ({
     },
     {
       id: 4,
-      date: new Date("2025-08-16T12:00:00"), // Saturday, 12:00 PM
+      date: new Date("2025-08-16T13:30:00"), // Saturday, 1:30 PM
       day: "السبت",
       title: "اختبار الأجزاء الأخيرة",
       description: "اختبارات للجزء الخامس والعشرون والجزء الثلاثون",
